@@ -11,7 +11,8 @@ class exploreDataAdapter(private val listOfPeople: List<exploreItemDataClass>): 
         fun bind(position: Int) {
             binding.ProfileImage.setImageResource(listOfPeople[position].Image)
             binding.Name.text = listOfPeople[position].Name
-            binding.Location.text = listOfPeople[position].Loction
+            binding.City.text = listOfPeople[position].city
+            binding.Location.text = ",within"+listOfPeople[position].Loction+"km"
             binding.Skills.text = listOfPeople[position].Hobby
             binding.Introduction.text = listOfPeople[position].introduction
         }
